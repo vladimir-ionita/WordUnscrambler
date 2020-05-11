@@ -1,18 +1,20 @@
 from nltk.corpus import words
-from filters import *
+from unscrambler import *
+from utilities import *
 
 
-if __name__ == '__main__':
-    dictionary = words.words()
-    dictionary = list(set(dictionary))
+dictionary = words.words()
+dictionary = list(set(dictionary))      # make it unique
 
-    scrambled_word = input("Enter the scrambled word: ")
-    while True:
-        pattern = input("Enter pattern: ")
-        filtered_words = filter_words_that_match_pattern(dictionary, pattern)
-        filtered_words = filter_words_that_match_allowed_letters(filtered_words, scrambled_word)
+scrambled_word = input("Enter the scrambled word: ")
+while True:
+    criteria = input("Enter pattern or length of word: ")
+    if is_number(criteria):
+        words = unscramble_word_that_match_length(dictionary, scrambled_word, int(criteria))
+    else:
+        words = unscramble_word_that_match_pattern(dictionary, scrambled_word, criteria)
 
-        print("Found {} result(s):".format(len(filtered_words)))
-        for w in filtered_words:
-            print("\t{}".format(w))
-        print()
+    print("Found {} result(s):".format(len(words)))
+    for w in words:
+        print("\t{}".format(w))
+    print()
