@@ -1,6 +1,5 @@
 def filter_words_by_length(words, length):
-    """
-    Filter a list of strings by a specified length.
+    """ Filter a list of strings by a specified length.
 
     Parameters
     :param words: the list of strings to be filtered
@@ -14,11 +13,10 @@ def filter_words_by_length(words, length):
 
 
 def filter_words_that_match_pattern(words, pattern):
-    """
-    Filter a list of words to match a specified pattern.
+    """ Filter a list of words to match a specified pattern.
     Pattern format examples:
     __e - words that are 3 characters long and end with an 'e', for example 'bye';
-    __u_ - words that are 4 characters long and the 3rd character should be 'u';
+    __u_ - words that are 4 characters long and the 3rd character should be 'u, for example 'true';
 
     Parameters
     :param words: the list of strings to be filtered
@@ -36,8 +34,7 @@ def filter_words_that_match_pattern(words, pattern):
 
 
 def filter_words_that_match_allowed_letters(words, allowed_letters):
-    """
-    Filter a list of words that match allowed characters
+    """ Filter a list of words that match allowed characters.
 
     Parameters
     :param words: the list of strings to be filtered
