@@ -31,10 +31,10 @@ Word unscrambler inspired from the `Wordscapes` game.
     
 
 ## Dependencies
-This unscrambler heavily depends on [NLTK (Natural Language Toolkit)](https://www.nltk.org/) for the words dictionary (the list of words).
+This unscrambler heavily depends on [NLTK (Natural Language Toolkit)](https://www.nltk.org/) for the words' dictionary (the list of words).
 The list of words might be incomplete, and it is easy to change it.
 In the `main.py`, find the 6th line: 
 
 ```dictionary = words.words()```
 
-and change it to a list of words of you choice.
+and change it to a list of words of your choice.
